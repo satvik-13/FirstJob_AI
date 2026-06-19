@@ -1,0 +1,9 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+*credentials*.json
+*token*.json
+*token*.pickle
+client_secret*
+node_modules/

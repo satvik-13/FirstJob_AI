@@ -1,0 +1,66 @@
+version: "3.8"
+
+services:
+  profile-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python profile_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+
+  job-scraper-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python job_scraper_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped
+
+  resume-tailor-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python resume_tailor_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped
+
+  apply-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python apply_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped
+
+  outreach-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python outreach_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped
+
+  tracker-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.agent
+    command: python tracker_agent_band.py
+    env_file: .env
+    volumes:
+      - ./agent_config.yaml:/app/agent_config.yaml
+    restart: unless-stopped

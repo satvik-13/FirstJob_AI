@@ -1,0 +1,26 @@
+# Band Agent Configuration
+# Each agent needs its own entry here after being created on app.band.ai
+
+profile_agent:
+  agent_id: "<profile-agent-uuid>"
+  api_key: "<profile-agent-api-key>"
+
+job_scraper_agent:
+  agent_id: "<job-scraper-agent-uuid>"
+  api_key: "<job-scraper-agent-api-key>"
+
+resume_tailor_agent:
+  agent_id: "<resume-tailor-agent-uuid>"
+  api_key: "<resume-tailor-agent-api-key>"
+
+apply_agent:
+  agent_id: "<apply-agent-uuid>"
+  api_key: "<apply-agent-api-key>"
+
+outreach_agent:
+  agent_id: "<outreach-agent-uuid>"
+  api_key: "<outreach-agent-api-key>"
+
+tracker_agent:
+  agent_id: "<tracker-agent-uuid>"
+  api_key: "<tracker-agent-api-key>"

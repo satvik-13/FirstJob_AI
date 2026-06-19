@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install "band-sdk[anthropic]" python-dotenv pyyaml httpx loguru
+
+COPY . .
+
+CMD ["python", "profile_agent_band.py"]
