@@ -13,7 +13,7 @@ import httpx
 router = APIRouter(prefix="/auth/gmail", tags=["gmail"])
 
 SCOPES = "https://www.googleapis.com/auth/gmail.send"
-REDIRECT_URI = "http://localhost:8000/api/auth/gmail/callback"
+REDIRECT_URI = f"{settings.backend_url}/api/auth/gmail/callback"
 
 
 @router.get("/connect")

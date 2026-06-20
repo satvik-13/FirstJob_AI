@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     # App
     secret_key: str
     frontend_url: str = "http://localhost:3000"
+    backend_url: str = "http://localhost:8000"
     environment: str = "development"
     app_name: str = "FirstJob"
 
